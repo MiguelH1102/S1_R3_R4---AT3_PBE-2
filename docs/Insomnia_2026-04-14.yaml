@@ -44,13 +44,35 @@ collection:
           modified: 1774980417195
           sortKey: -1774980417195
           description: ""
+      - name: Produtos
+        meta:
+          id: fld_3e33628235b84636acb473e40e27e3c0
+          created: 1774980532002
+          modified: 1774980532002
+          sortKey: -1774980398923.5
+          description: ""
+  - name: S1_R3_R4 - AT3_PBE 2
+    meta:
+      id: fld_01ccc416727c48a19aaaf6f23a8c7ac7
+      created: 1776163627534
+      modified: 1776163627534
+      sortKey: -1773771950296.5
+      description: ""
+    children:
+      - name: Categorias
+        meta:
+          id: fld_0b0ba0de86044b89bdb5fc3a013fab52
+          created: 1776163627543
+          modified: 1776163627543
+          sortKey: -1774980417195
+          description: ""
         children:
           - url: http://localhost:8000/categorias
             name: New Request
             meta:
-              id: req_3409db9be6854f25bd5bbf41ec9b1dd1
-              created: 1774980420173
-              modified: 1774980432468
+              id: req_1697c66311df456ba81e75380207fb6d
+              created: 1776163627558
+              modified: 1776163627558
               isPrivate: false
               description: ""
               sortKey: -1774980420173
@@ -71,9 +93,9 @@ collection:
           - url: http://localhost:8000/categorias
             name: New Request
             meta:
-              id: req_52287763d40648b7aa6bf786ce93149e
-              created: 1774980439503
-              modified: 1774980777665
+              id: req_60ba41208ed04f0291b3e6be5199b570
+              created: 1776163627566
+              modified: 1776163627566
               isPrivate: false
               description: ""
               sortKey: -1774980439503
@@ -103,9 +125,9 @@ collection:
           - url: http://localhost:8000/categorias/3
             name: New Request
             meta:
-              id: req_e4728bdaaad64927a0d299745a327aed
-              created: 1774980462432
-              modified: 1774980833751
+              id: req_762a628f6bfa482e977222d8783a64ba
+              created: 1776163627574
+              modified: 1776163627574
               isPrivate: false
               description: ""
               sortKey: -1774980462432
@@ -135,9 +157,9 @@ collection:
           - url: http://localhost:8000/categorias/3
             name: New Request
             meta:
-              id: req_ef24fc4eccdd43068ed2a3eb399934b8
-              created: 1774980479056
-              modified: 1774980841315
+              id: req_048b120069e94a8790bbce6b9871ac21
+              created: 1776163627592
+              modified: 1776163627592
               isPrivate: false
               description: ""
               sortKey: -1774980479056
@@ -157,18 +179,18 @@ collection:
               rebuildPath: true
       - name: Produtos
         meta:
-          id: fld_3e33628235b84636acb473e40e27e3c0
-          created: 1774980532002
-          modified: 1774980532002
+          id: fld_f9ec20d1ca5b430899059601025c45b6
+          created: 1776163627598
+          modified: 1776163627598
           sortKey: -1774980398923.5
           description: ""
         children:
           - url: http://localhost:8000/produtos
             name: New Request
             meta:
-              id: req_a5350e37798b40d681f0ba272958e526
-              created: 1774980532007
-              modified: 1774980549957
+              id: req_646a43d68932417cbed8258d0041ed75
+              created: 1776163627605
+              modified: 1776163627605
               isPrivate: false
               description: ""
               sortKey: -1774980420173
@@ -189,9 +211,9 @@ collection:
           - url: http://localhost:8000/produtos
             name: New Request
             meta:
-              id: req_9a62e75e52694040adcb3315d7125b2f
-              created: 1774980532012
-              modified: 1774980615969
+              id: req_5d75892a98f6485286b69219cf40903b
+              created: 1776163627623
+              modified: 1776163627623
               isPrivate: false
               description: ""
               sortKey: -1774980439503
@@ -233,9 +255,9 @@ collection:
           - url: http://localhost:8000/produtos/1
             name: New Request
             meta:
-              id: req_bd645b94a33249e5a0e88da42b13f0f7
-              created: 1774980532015
-              modified: 1774980682585
+              id: req_15c9a18d1f39405ea26819af4e75cf38
+              created: 1776163627631
+              modified: 1776163627631
               isPrivate: false
               description: ""
               sortKey: -1774980462432
@@ -266,9 +288,135 @@ collection:
           - url: http://localhost:8000/produtos/3
             name: New Request
             meta:
-              id: req_ad01d8b7fb5a4bc0910dc1d4f9ad93dc
-              created: 1774980532019
-              modified: 1774980704556
+              id: req_6d294b2a30c94c4b973748380c13844b
+              created: 1776163627640
+              modified: 1776163627640
+              isPrivate: false
+              description: ""
+              sortKey: -1774980479056
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Clientes
+        meta:
+          id: fld_a19c9be3b1a84a2090c3f5f869677192
+          created: 1776163653427
+          modified: 1776163653427
+          sortKey: -1774980389787.75
+          description: ""
+        children:
+          - url: http://localhost:8000/clientes
+            name: New Request
+            meta:
+              id: req_0aea57e027af4a4f90a716a5d6864296
+              created: 1776163653434
+              modified: 1776166756482
+              isPrivate: false
+              description: ""
+              sortKey: -1774980420173
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/clientes
+            name: New Request
+            meta:
+              id: req_5463c2744d81487aafe3c9113b35ca13
+              created: 1776163653441
+              modified: 1776180651339
+              isPrivate: false
+              description: ""
+              sortKey: -1774980439503
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Teste Atualizar",
+                	"cpf": "65876875967",
+                	"telefone": "19452789212",
+                	"cep": "13170023",
+                	"numero": "11236",
+                	"complemento": "Na rua 7"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/clientes/12
+            name: New Request
+            meta:
+              id: req_5caec724950b4119b715f6db8cbfa699
+              created: 1776163653448
+              modified: 1776181719408
+              isPrivate: false
+              description: ""
+              sortKey: -1774980462432
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Jose",
+                	"cpf": "65876875978",
+                	"telefone": "19452789212",
+                	"cep": "13170023",
+                	"numero": "11236",
+                	"complemento": "Na rua 4 perto da casa azul"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/clientes/5
+            name: New Request
+            meta:
+              id: req_1dd8bca052dc4a93883ccc9ab2a62516
+              created: 1776163653454
+              modified: 1776175416504
               isPrivate: false
               description: ""
               sortKey: -1774980479056

@@ -70,6 +70,44 @@ const clienteRepository = {
         }
        
     },
+    editar: async (id ,cliente, telefone,endereco) => {
+        const conn = await connection.getConnection();
+
+        try {
+            await conn.beginTransaction();
+
+            const sqlCliente = `
+                UPDATE clientes SET Nome=?, Cpf=? WHERE Id = ? ;`;
+            const valuesCliente = [cliente.nome, cliente.cpf,id];
+            const [rowCli] = await conn.execute(sqlCliente, valuesCliente);
+
+           
+             const sqlTelefone = `
+                 UPDATE telefones SET Telefone = ? WHERE idCliente = ?;`;
+             const valuesTelefone = [ telefone.telefone, id];
+             const [rowTel]=await conn.execute(sqlTelefone, valuesTelefone);
+            
+            
+             const sqlEndereco = `
+                UPDATE enderecos SET numero = ?, cidade = ?, bairro = ?, cep = ?, complemento = ?, uf = ?, logradoro = ? WHERE idCliente = ?;`;
+            const valuesEndereco = [endereco.numero, endereco.cidade,endereco.bairro, endereco.cep, endereco.complemento, endereco.uf, endereco.logradoro, id]; 
+            const [rowEnd] = await conn.execute(sqlEndereco, valuesEndereco);
+
+            
+
+            await conn.commit();
+
+            return{rowCli, rowEnd, rowTel}
+
+        } catch (error) {
+            await conn.rollback();
+            conn.release();
+            console.error("Erro ao editar cliente:", error);
+            throw error;
+        } finally{
+            conn.release();
+        }
+    },
 
     
 };

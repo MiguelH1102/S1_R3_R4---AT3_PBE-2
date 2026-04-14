@@ -76,6 +76,59 @@ const clienteController = {
             res.status(500).json({message: 'Ocorreu um erro no servidor', errorMessage: error.message})
         }
     },
+    alterar: async (req, res) => {
+        try {
+
+            const id = req.params.id;
+            const { nome, cpf, telefone, cep, numero, complemento } = req.body;
+
+            if (!/^[0-9]{8}$/.test(cep)) {
+                return res.status(400).json({ message: 'CEP inválido' });
+            }
+
+            const resp = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+
+            if (resp.data.erro) {
+                return res.status(400).json({ message: 'CEP não encontrado' });
+            }
+
+            const { bairro, localidade, uf, logradouro } = resp.data;
+
+            const cliente = Cliente.alterar({ nome, cpf },id);
+
+            const telefoneObj = Telefone.criar({ telefone });
+
+            const enderecoObj = Endereco.criar({
+                cep,
+                bairro,
+                cidade: localidade,
+                uf,
+                numero,
+                logradouro,
+                complemento
+            });
+            
+            const result = await clienteRepository.editar(
+            id,
+            cliente,
+            telefoneObj,
+            enderecoObj
+        );
+
+
+            res.status(200).json({
+                message: "Cliente atualizado com sucesso",
+                result
+            });
+
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({
+                message: 'Erro ao atualizar cliente',
+                errorMessage: error.message
+            });
+        }
+    },
 
 };
   async function consultaCep(cep) {

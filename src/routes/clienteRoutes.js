@@ -6,6 +6,7 @@ const clienteRoutes = Router();
 clienteRoutes.post('/', clienteController.criar);
 clienteRoutes.get('/', clienteController.selecionar);
 clienteRoutes.delete('/:id', clienteController.deletar);
+clienteRoutes.put('/:id', clienteController.alterar);
 
 
 export default clienteRoutes
