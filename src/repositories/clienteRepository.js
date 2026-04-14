@@ -38,7 +38,7 @@ const clienteRepository = {
         }
     },
      selecionar: async () => {
-        const sql = 'SELECT clientes.Id, clientes.Nome, clientes.Cpf, clientes.DataCad, telefones.Telefone, enderecos.numero, enderecos.cidade, enderecos.bairro, enderecos.cep, enderecos.complemento, enderecos.uf, enderecos.logradoro FROM clientes LEFT JOIN telefones ON telefones.idCliente = clientes.Id LEFT JOIN enderecos ON enderecos.idCliente = clientes.Id';
+        const sql = 'SELECT * FROM clientes INNER JOIN telefones ON telefones.idCliente = clientes.Id INNER JOIN enderecos ON enderecos.idCliente = clientes.Id';
         const [row] = await connection.execute(sql);
         return row
     },
