@@ -131,18 +131,5 @@ const clienteController = {
     },
 
 };
-  async function consultaCep(cep) {
-        try {
-              const resp = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-               if (resp.data.erro) {
-                return res.status(400).json({ message: 'CEP não encontrado' });
-            }
-            return respApi.data;
-
-        } catch (error) {
-            console.error(error)
-            throw new Error("Erro ao buscar o CEP", error.message)
-        }
-    }
 
 export default clienteController;
